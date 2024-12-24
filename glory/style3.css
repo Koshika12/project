@@ -1,0 +1,179 @@
+/* General styles */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #3b141c;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1300px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 8px;
+    background: var(--secondary-color);
+}
+
+/* Navbar styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: #c7d2f7;
+    height: 80px; /* Define a fixed height */
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    transition: 0.3s ease;
+    color: var(--dark-color);
+    border-radius: 30px;
+    font-size: 1.12rem;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    background: #f3961c;
+    color: var(--white-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
+}
+
+/* Heading styling */
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem;
+    background: rgba(255, 51, 153, 0.05);
+}
+
+/* Fix for the overlap issue */
+main {
+    margin-top: 80px; /* Match this to the header height */
+}
+.heading span{
+    color:rgb(250, 74, 104);
+}
+.about .row{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap:wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    
+}
+ .about .row .video-container{
+    flex:1 1 40rem;
+    position:relative;
+    
+ }
+ .about .row .video-container video{
+    width:100%;
+    border:1.5rem solid #fff;
+    border-radius:.5rem;
+    box-shadow:0.5rem 1rem rgba(0,0,0,.1);
+    height:100%;
+    object-fit:cover;
+    
+ }
+ .about .row .video-container h3{
+      position: absolute;
+      top:50%; transform:   translateY(-50%);
+      font-size:3rem;
+      width:100%;
+      background:#fff;    
+      padding:1rem 2rem;
+      text-align:center;
+      mix-blend-mode: screen;
+    
+ }
+
+ .about .row .content{
+    flex:1 1 40rem;
+ }
+
+ .about .row .content h3{
+    font-size:3rem;
+    color:#333;
+ }
+
+ .about .row .content p{
+    font-size:1.2rem;
+    color:#333;
+    padding:.5rem 0;
+    padding-top: 0.5rem;
+    line-height: 1.5;
+ }
+
+ 
