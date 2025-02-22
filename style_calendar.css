@@ -1,0 +1,172 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ff8c00;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff8c00;
+}
+
+header nav a.logout-button {
+    background-color: #f44336; /* Red color */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+header nav a.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Main Content Styling */
+main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Calendar Container */
+.calendar {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Calendar Header */
+.calendar-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 2rem; /* Larger font size for header */
+    text-align: center;
+}
+
+/* Weekday Labels */
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Equal-width columns for all weekdays */
+    background-color: #f4f4f4;
+    padding: 10px 0; /* Adjust padding for better alignment */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ddd; /* Optional separator line */
+}
+
+.weekdays div {
+    padding: 10px 0; /* Space for the weekday names */
+    text-transform: uppercase; /* Make weekday names uppercase */
+}
+
+/* Calendar Days Grid */
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Ensure alignment with weekdays */
+    grid-gap: 10px; /* Add spacing between days */
+    padding: 20px;
+}
+
+/* Styling for Each Day Cell */
+.day {
+    text-align: center;
+    padding: 20px 0; /* Add padding for larger clickable area */
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Larger text for the day numbers */
+}
+
+.day:hover {
+    background-color: #eaeaea; /* Light hover effect */
+}
+
+/* Booked Days Styling */
+.booked {
+    background-color: #ff5733; /* Highlight booked days */
+    color: white;
+}
+
+/* Empty Days */
+.empty {
+    visibility: hidden; /* Hide empty cells (e.g., for previous/next months) */
+}
+
+/* Button Styling */
+button, a.button {
+    background-color: #ff8c00;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+button:hover, a.button:hover {
+    background-color: #ff5c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calendar {
+        width: 100%;
+        padding: 0 10px; /* Add padding for smaller screens */
+    }
+
+    .weekdays {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .calendar-header {
+        font-size: 1.5rem; /* Adjust header size */
+    }
+
+    .day {
+        padding: 15px 0; /* Adjust padding for smaller screens */
+        font-size: 1rem;
+    }
+}
