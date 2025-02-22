@@ -1,0 +1,113 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #3b141c;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+}
+html{
+scroll-behavior: smooth;
+}
+
+/* Styling for the whole site */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1300px;
+}
+
+.section-title{
+    text-align:center;
+    padding: 60px 0 100px;
+    text-transform:uppercase;
+    font-size:2rem;
+}
+
+.section-title::after{
+    content:"";
+    width:80px;
+    height:5px;
+    display:block;
+    margin:10px auto 0;
+    border-radius: 8px;
+    background:var(--secondary-color);
+}
+
+
+
+
+/* Navbar styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: #c7d2f7;
+    height: 70px; /* Adjust height as needed */
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .nav-logo .logo-text {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    transition: 0.3s ease;
+    color: var(--dark-color);
+    border-radius: 30px;
+    font-size: 1.12rem;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    background: #f3961c;
+    color: var(--white-color);
+}
+.navbar :where(#menu-close-button, #menu-open-button){
+    display:none ;
+    
+}
+
+

@@ -1,0 +1,134 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundAnimation 15s infinite; /* Slideshow duration and repeat */
+   
+}
+/* Slideshow Container with blur effect */
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slide 15s infinite;
+    filter: blur(8px); /* Apply the blur effect */
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('sport.jpg');
+    }
+    33% {
+        background-image: url('social.jpg');
+    }
+    66% {
+        background-image: url('corporate.jpg');
+    }
+    100% {
+        background-image: url('culture.jpg');
+    }
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for the form */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Input fields styling */
+form input, 
+form select, 
+form textarea, 
+form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for inputs */
+}
+
+form input:focus, 
+form select:focus, 
+form textarea:focus {
+    border-color: #eb9e0f;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(235, 158, 15, 0.5);
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Submit Button */
+form button {
+    background-color: #eb9e0f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1013d6;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.booking-success {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    width: 300px;
+    margin: 50px auto;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.booking-success h3 {
+    margin-bottom: 10px;
+}
+.booking-success p {
+    font-size: 16px;
+    color: #333;
+}
+.booking-success .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.booking-success .back-button:hover {
+    background-color: #0056b3;
+}
